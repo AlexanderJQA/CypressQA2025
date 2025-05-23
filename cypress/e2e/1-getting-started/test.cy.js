@@ -12,4 +12,22 @@
     cy.get('.action-select-multiple > [value="fr-oranges"]')  }) //seleccion elemento en un desplegable//
 })
 
-.should() //
+
+
+
+  it("visitar el banner ", () => {
+    cy.visit("https://example.cypress.io")
+    cy.get(".banner").should("be.visible")
+    cy.get('#navbar').should("contain","Commands")      // verificar que este visible//
+
+   }) 
+
+it("visitar el banner", () => {
+  cy.visit("https://example.cypress.io")
+
+  cy.get('.container').then((items) => {
+    const numeroDeItems = items.length
+    expect(numeroDeItems).to.equal(8)
+  })
+})
+
