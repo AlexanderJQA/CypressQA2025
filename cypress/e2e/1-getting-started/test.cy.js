@@ -19,15 +19,22 @@
     cy.visit("https://example.cypress.io")
     cy.get(".banner").should("be.visible")
     cy.get('#navbar').should("contain","Commands")      // verificar que este visible//
-
+     
    }) 
 
 it("visitar el banner", () => {
   cy.visit("https://example.cypress.io")
-
   cy.get('.container').then((items) => {
-    const numeroDeItems = items.length
+    const numeroDeItems = items.length //8 saber cuanto items pueden tener//
     expect(numeroDeItems).to.equal(8)
+      cy.screenshot('Validacion QA')
   })
 })
+
+it("Validacion del titulo", () => {
+  cy.visit("https://example.cypress.io")
+  cy.get('h1').should("contain.text", "Kitchen Sink")
+  cy.title().should("eq", "Cypress.io: Kitchen Sink")
+})
+
 

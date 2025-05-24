@@ -6,6 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
       config.browser = "chrome";
     },
-    
+    baseUrl: "https://example.cypress.io/"
   },
 });
