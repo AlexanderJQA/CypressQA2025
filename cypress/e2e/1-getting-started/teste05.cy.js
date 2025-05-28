@@ -10,6 +10,15 @@ describe('login and loguot', ()=> {
         cy.url().should('eq', 'https://the-internet.herokuapp.com/login')
     
 } )
-
-
+it("Validar login con credenciales incorrectas", ()=> {
+    cy.visit("https://the-internet.herokuapp.com/login")
+    cy.get('#username').type('tomsmith1')
+    cy.get('#password').type('SuperSecretPassword1!')
+    cy.get('#login').submit()
+    cy.url().should('eq', 'https://the-internet.herokuapp.com/login')
+    cy.get('#flash').should('contain', 'no debe pasar')
+    
+    
+    // valildar el mensaje de error//    
+     } )
 } )
