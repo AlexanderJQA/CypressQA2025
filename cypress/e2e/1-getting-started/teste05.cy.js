@@ -16,9 +16,6 @@ it("Validar login con credenciales incorrectas", ()=> {
     cy.get('#password').type('SuperSecretPassword1!')
     cy.get('#login').submit()
     cy.url().should('eq', 'https://the-internet.herokuapp.com/login')
-    cy.get('#flash').should('contain', 'no debe pasar')
-    
-    
-    // valildar el mensaje de error//    
+    cy.get('#flash').should('contain', ' Your username is invalid!')    // valildar el mensaje de error//    
      } )
 } )

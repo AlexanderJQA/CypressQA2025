@@ -6,12 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
       config.browser = "chrome";
     },
-    screenshotOnRunFailure:true,
-    screenshotsFolder: 'cypress/screenshots',
-    video: true,
-    videoFolder: 'cypress/videos',
    
-  
+
   
   },
 });
