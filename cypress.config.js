@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       config.browser = "chrome";
     },
-   
+     defaultCommandTimeout: 10000,
 
   
   },
